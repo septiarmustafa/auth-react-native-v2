@@ -2,17 +2,21 @@ import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import Colors from "../../utils/Colors";
 
-export default function ItemProduct({ id, name, desc }) {
+export default function ItemProduct({ id, name, desc, price }) {
   return (
     <View style={styles.containerItem}>
       <Image
         source={require("../../../assets/images/cargo-truck.png")}
+        // source={{
+        //   uri: 'https://random.imagecdn.app/500/150',
+        // }}
         style={styles.imageItem}
       />
       <View style={styles.textItem}>
         <Text style={styles.titleItem}>{name}</Text>
+        <Text>{price}</Text>
         <Text>{desc}</Text>
-        <Text>{id}</Text>
+        
       </View>
     </View>
   );

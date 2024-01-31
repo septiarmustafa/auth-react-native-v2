@@ -6,6 +6,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../../utils/Colors";
 import { Text } from "react-native";
 import axios from "axios";
+import { BASE_URL } from "../../config/baseUrl";
+import http from "../../config/httpConfig";
+import ItemProduct from "./ItemProduct";
 
 export default function HomeScreen() {
   const [selectedId, setSelectedId] = useState();
@@ -13,18 +16,15 @@ export default function HomeScreen() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const apiEndpoint = "http://10.10.100.207:8081/api/v1/product";
+    const apiEndpoint = BASE_URL+"/product";
+    // console.log(apiEndpoint)
     const authToken = AsyncStorage.getItem("token");
-    console.log(authToken);
+    // console.log(authToken);
 
-    axios
-      .get(apiEndpoint, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      })
+    http
+      .get(apiEndpoint)
       .then((response) => {
-        setProducts(response.data);
+        setProducts(response.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -35,7 +35,7 @@ export default function HomeScreen() {
 
   const renderItem = ({ item }) => {
     return (
-      <ItemProduct name={item.name} desc={item.description} id={item.id} />
+      <ItemProduct name={item.name} desc={item.description} id={item.id} price={item.productPrice[0].price} />
     );
   };
   return (

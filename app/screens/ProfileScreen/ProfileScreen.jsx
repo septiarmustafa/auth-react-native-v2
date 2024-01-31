@@ -29,7 +29,7 @@ export default function ProfileScreen() {
           source={require("./../../../assets/baim.jpg")}
           style={styles.userImage}
         />
-        <Text style={styles.userName}>Baim Wong</Text>
+        <Text style={styles.userName}>Baim Wrong</Text>
       </View>
       <TouchableOpacity
         onPress={() => {

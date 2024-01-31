@@ -11,15 +11,18 @@ export default function Header() {
     <View style={styles.container}>
       <View style={styles.profileMainContainer}>
         <View style={styles.profileContainer}>
-          <Image source={{ uri: "" }} style={styles.userImage} />
+          <Image
+            source={require("./../../../assets/baim.jpg")}
+            style={styles.userImage}
+          />
           <View>
             <Text style={styles.welcome}>Welcome,</Text>
-            <Text style={styles.userName}>username</Text>
+            <Text style={styles.userName}>Baim Wrong</Text>
           </View>
         </View>
         <FontAwesome name="bookmark" size={26} color={Colors.WHITE} />
       </View>
-      <View style={styles.searchBarContainer}>
+      {/* <View style={styles.searchBarContainer}>
         <TextInput
           placeholder="Search..."
           placeholderTextColor={Colors.PRIMARY_COLOR}
@@ -31,7 +34,7 @@ export default function Header() {
           color={Colors.PRIMARY_COLOR}
           style={styles.searchBtn}
         />
-      </View>
+      </View> */}
     </View>
   );
 }

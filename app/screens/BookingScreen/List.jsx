@@ -2,26 +2,27 @@ import React from "react";
 import { StyleSheet, Text, View, SectionList } from "react-native";
 
 const DATA = [
+  // {
+  //   title: "Main dishes",
+  //   data: [],
+  // },
   {
-    title: "Main dishes",
-    data: [],
-  },
-  {
-    title: "Sides",
+    title: "Store",
     data: [
-      "French Fries",
-      "Onion Rings",
-      "Fried Shrimps",
-      "French Fries",
-      "Onion Rings",
-      "Fried Shrimps",
-      "French Fries",
-      "Onion Rings",
-      "Fried Shrimps",
-      "French Fries",
-      "Onion Rings",
-      "Fried Shrimps",
-    ],
+      "WMB",
+      "WMB2"
+      // ,
+    //   "Fried Shrimps",
+    //   "French Fries",
+    //   "Onion Rings",
+    //   "Fried Shrimps",
+    //   "French Fries",
+    //   "Onion Rings",
+    //   "Fried Shrimps",
+    //   "French Fries",
+    //   "Onion Rings",
+    //   "Fried Shrimps",
+    ]
   },
 ];
 
